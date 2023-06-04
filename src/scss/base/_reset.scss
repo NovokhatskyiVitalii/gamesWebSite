@@ -51,6 +51,16 @@ li {
 }
 
 .container {
-    width: 1420px;
+    max-width: 1420px;
     margin: 0 auto;
+    padding: 0 30px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
 }

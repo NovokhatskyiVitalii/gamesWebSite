@@ -1,0 +1,70 @@
+.section {
+    &-main {
+        padding-top: 40px;
+        position: relative;
+        max-width: 1920px;
+        margin: 0 auto;
+        min-height: 70vh;
+
+        &:after,
+        &:before {
+            height: 765px;
+            width: 1363px;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        &:after {
+            background: url(/src/images/snow.gif) no-repeat center/cover;
+            opacity: 0.1;
+        }
+
+        &:before {
+            background: url(/src/images/bg.png)no-repeat center/cover;
+        }
+    }
+
+    .description {
+        margin-top: 7%;
+        max-width: 540px;
+        animation: move 1s;
+
+        &-title {
+            h1 {
+                font-weight: 600;
+                font-size: 100px;
+                line-height: 100px;
+            }
+        }
+
+        &-subtitle {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: $sea;
+            margin-top: 26px;
+        }
+
+        &-button {
+            @include button;
+            @include hoverViolet;
+            margin-top: 36px;
+        }
+    }
+
+    @keyframes move {
+        0% {
+            opacity: 0;
+            transform: translateX(-400px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
