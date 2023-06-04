@@ -32,6 +32,16 @@
     }
 }
 
+@mixin hoverGrey {
+    &:hover {
+        background: #525c67;
+    }
+
+    &:active {
+        background: #454545;
+    }
+}
+
 @mixin bg {
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,0 +1,48 @@
+.section-about {
+    margin-top: 90px;
+
+    .video {
+        position: relative;
+        margin-top: 32px;
+        transition: transform .5s;
+        transform: scale(1);
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        &-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+
+            &.hidden {
+                opacity: 0;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 50px;
+            color: $white;
+            line-height: 39px;
+        }
+
+        &-btn {
+            @include button($dark);
+            @include hoverGrey;
+            padding: 9px 26px;
+            line-height: 16px;
+            display: inline-block;
+            margin: 28px auto 0 auto;
+        }
+    }
+}
