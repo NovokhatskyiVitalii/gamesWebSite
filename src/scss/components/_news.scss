@@ -6,10 +6,12 @@
         transition: transform .5s;
         transform: translate(0);
 
+
         &-item {
             background: linear-gradient(177.87deg, #30373f 41.63%, #141615 185.57%);
             border-radius: 6px;
             padding: 20px;
+            width: 620px;
 
             &__info {
                 justify-content: space-between;
@@ -88,6 +90,12 @@
         }
 
         .swiper {
+
+            &-button-prev::after,
+            &-button-next::after {
+                display: none;
+            }
+
             &-button {
                 position: absolute;
                 top: 50%;
