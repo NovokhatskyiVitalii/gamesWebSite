@@ -5,7 +5,13 @@ const menuButton = document.querySelector(".header-menu__button"),
   videoButton = document.querySelector(".video-btn"),
   checkBox = document.querySelectorAll(".checkbox"),
   faqItem = document.querySelectorAll(".faq-item"),
-  buttonElementGoToTop = document.querySelector("#btn-top");
+  buttonElementGoToTop = document.querySelector("#btn-top"),
+  buyButton = document.querySelectorAll(".buy-button"),
+  modal = document.querySelector(".modal"),
+  modalTitle = document.querySelector(".modal-subtitle"),
+  modalPrice = document.querySelector(".modal-total__price"),
+  modalClose = document.querySelector(".modal-close"),
+  overlay = document.querySelector(".overlay");
 
 let isPlay = false;
 
@@ -19,6 +25,25 @@ const checkBoxes = {
   requirements: ["minimum", "recommended"],
   versions: ["standard", "limited"],
 };
+
+const values = [
+  {
+    price: 19.99,
+    title: "Standard Edition",
+  },
+  {
+    price: 18.99,
+    title: "Standard Edition",
+  },
+  {
+    price: 29.99,
+    title: "Deluxe Edition",
+  },
+  {
+    price: 35.99,
+    title: "Buy dualsense with a game",
+  },
+];
 
 function toggleMenu() {
   header.classList.toggle(classes.opened);
@@ -80,11 +105,33 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-window.onscroll = scrollFunction;
+function handleByButton({ currentTarget: target }) {
+  const { value } = target.dataset;
 
+  if (!value) return;
+
+  const { price, title } = values[value];
+  modalTitle.innerText = title;
+  modalPrice.innerText = `${price}$`;
+  modal.classList.add(classes.opened);
+  overlay.classList.add(classes.opened);
+  document.body.style.overflow = "hidden";
+  window.addEventListener("keydown", closeModal);
+}
+
+function closeModal(element) {
+  element.code === "Escape";
+  modal.classList.remove(classes.opened);
+  overlay.classList.remove(classes.opened);
+  document.body.style.overflow = "";
+}
+
+window.onscroll = scrollFunction;
 menuButton.addEventListener("click", toggleMenu);
 videoButton.addEventListener("click", handleVideo);
 buttonElementGoToTop.addEventListener("click", topFunction);
 menuLink.forEach((link) => link.addEventListener("click", scrollToSection));
 checkBox.forEach((box) => box.addEventListener("click", handleCheckBox));
 faqItem.forEach((item) => item.addEventListener("click", handleFaqItem));
+buyButton.forEach((btn) => btn.addEventListener("click", handleByButton));
+modalClose.addEventListener("click", closeModal);
