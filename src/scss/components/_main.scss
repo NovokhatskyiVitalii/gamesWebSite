@@ -67,4 +67,30 @@
             transform: translateX(0px);
         }
     }
+
+    @media (max-width: 600px) {
+        min-height: 600px;
+
+        .description {
+            &-title {
+                h1 {
+                    font-weight: 600;
+                    font-size: 60px;
+                    line-height: 70px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 374px) {
+        .description {
+            &-title {
+                h1 {
+                    font-weight: 600;
+                    font-size: 50px;
+                    line-height: 55px;
+                }
+            }
+        }
+    }
 }
