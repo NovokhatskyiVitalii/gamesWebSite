@@ -4,7 +4,8 @@ const menuButton = document.querySelector(".header-menu__button"),
   video = document.querySelector("#video"),
   videoButton = document.querySelector(".video-btn"),
   checkBox = document.querySelectorAll(".checkbox"),
-  faqItem = document.querySelectorAll(".faq-item");
+  faqItem = document.querySelectorAll(".faq-item"),
+  buttonElementGoToTop = document.querySelector("#btn-top");
 
 let isPlay = false;
 
@@ -67,8 +68,23 @@ function handleFaqItem({ currentTarget: target }) {
   content.style.height = `${isOpened ? height : 0}px`;
 }
 
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    buttonElementGoToTop.style.display = "block";
+  } else {
+    buttonElementGoToTop.style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+window.onscroll = scrollFunction;
+
 menuButton.addEventListener("click", toggleMenu);
 videoButton.addEventListener("click", handleVideo);
+buttonElementGoToTop.addEventListener("click", topFunction);
 menuLink.forEach((link) => link.addEventListener("click", scrollToSection));
 checkBox.forEach((box) => box.addEventListener("click", handleCheckBox));
 faqItem.forEach((item) => item.addEventListener("click", handleFaqItem));
