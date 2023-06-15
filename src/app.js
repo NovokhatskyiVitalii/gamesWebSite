@@ -1,6 +1,7 @@
 import "./scss/style.scss";
 
 import "./modules/main";
+import "./modules/language";
 import timer from "./modules/timer";
 import slider from "./modules/slider";
 

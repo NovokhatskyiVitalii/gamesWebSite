@@ -11,7 +11,6 @@
             background: linear-gradient(177.87deg, #30373f 41.63%, #141615 185.57%);
             border-radius: 6px;
             padding: 20px;
-            width: 620px;
 
             &__info {
                 justify-content: space-between;
@@ -58,6 +57,7 @@
             &__text {
                 flex-direction: column;
                 height: 100%;
+                max-width: 300px;
 
                 p {
                     color: #d9d9d9;
@@ -90,6 +90,10 @@
         }
 
         .swiper {
+
+            &-slide {
+                width: auto;
+            }
 
             &-button-prev::after,
             &-button-next::after {

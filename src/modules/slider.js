@@ -5,7 +5,7 @@ Swiper.use([Navigation]);
 function slider() {
   new Swiper(".swiper", {
     loop: true,
-    slidesPerView: 2,
+    slidesPerView: "auto",
     spaceBetween: 20,
     initialSlide: 2,
     navigation: {
