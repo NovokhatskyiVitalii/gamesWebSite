@@ -12,6 +12,17 @@ function slider() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      350: {
+        slidesPerView: 1,
+      },
+      1000: {
+        slidesPerView: 1.5,
+      },
+      1150: {
+        slidesPerView: 2,
+      },
+    },
   });
 }
 

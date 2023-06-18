@@ -24,6 +24,7 @@
                 line-height: 24px;
                 color: $white;
                 text-align: center;
+                flex-direction: column;
             }
         }
 
@@ -131,7 +132,6 @@
                 }
 
                 img {
-                    max-width: unset;
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -161,6 +161,133 @@
             @include button($orange);
             @include hoverOrange;
             margin-top: 28px;
+        }
+    }
+
+    @media (max-width: 780px) {
+        .explore {
+
+            &-info {
+                margin-top: 50px;
+            }
+
+            &-img {
+                &__wrap {
+                    width: 280px;
+                    height: 280px;
+
+                    &::before {
+                        width: 40px;
+                        height: 110px;
+                        filter: blur(55px);
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    @media (max-width: 740px) {
+        .explore {
+
+            &-info {
+                margin-top: 30px;
+            }
+
+            &-img {
+                &__wrap {
+                    width: 240px;
+                    height: 240px;
+
+                    &::before {
+                        width: 40px;
+                        height: 110px;
+                        filter: blur(55px);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        .explore {
+            &-info {
+                position: relative;
+            }
+
+            &-img {
+                position: absolute;
+                z-index: -100;
+                opacity: 0.5;
+
+                &__wrap {
+                    width: 240px;
+                    height: 240px;
+
+                    &::before {
+                        width: 40px;
+                        height: 110px;
+                        filter: blur(55px);
+                    }
+
+                    img {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        h2 {
+            font-size: 35px;
+        }
+
+        .explore {
+
+            &-button {
+                margin: 30px auto 0 auto;
+            }
+
+        }
+    }
+
+    @media (max-width: 550px) {
+        .explore {
+            &-img {
+                &__wrap {
+
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 440px) {
+        .explore {
+            &-img {
+                &__wrap {
+
+                    img {
+                        height: 240px;
+                    }
+                }
+            }
+
+            &-description {
+                min-width: auto;
+                width: auto;
+
+                ul {
+                    font-size: 14px;
+                    line-height: 32px;
+                }
+            }
+
         }
     }
 }

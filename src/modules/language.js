@@ -24,9 +24,9 @@ const languages = {
     darkdale: "Darkdale Armour",
     official: "Official digital soundtrack",
     newsTitle1: "Will receive a large update on release",
-    newsTitle2: "Is officially one of the largest PS4 games by size",
-    newsTitle3: "Is the final chapter in an epic story",
-    newsTitle4: "New armor, perks, and gameplay options are available",
+    newsTitle2: "One of the largest in size",
+    newsTitle3: "Is the final chapter in an story",
+    newsTitle4: "New armor, perks, and gameplay",
     newsText1:
       "God of War: Ragnarok is fast approaching. No wonder that we have been regularly receiving new information and materials related to the title in recent times. Last week, a trailer presenting the possibilities of the game on PlayStation 5 hit the network , and a little earlier we learned that the work on the production was completed.",
     newsText2:
@@ -79,9 +79,9 @@ const languages = {
     darkdale: "Обладунки Darkdale",
     official: "Офіційний цифровий саундтрек",
     newsTitle1: "Отримає велике оновлення після випуску",
-    newsTitle2: "Це офіційно одна з найбільших ігор для PS4 за розміром",
-    newsTitle3: "Це останній розділ епічної історії",
-    newsTitle4: "Доступні нові обладунки, бонуси та ігровий процес",
+    newsTitle2: "Один з найбільших за розміром",
+    newsTitle3: "Це останній розділ історії",
+    newsTitle4: "Доступні нові обладунки, ігровий процес",
     newsText1:
       "God of War: Ragnarok швидко наближається. Не дивно, що останнім часом ми регулярно отримуємо нову інформацію та матеріали, пов’язані з назвою. Минулого тижня в мережу потрапив трейлер, який представляє можливості гри на PlayStation 5, а трохи раніше стало відомо, що робота над постановкою завершена.",
     newsText2:

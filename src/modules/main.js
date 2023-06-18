@@ -43,6 +43,14 @@ const values = [
     price: 35.99,
     title: "Buy dualsense with a game",
   },
+  {
+    price: 21.99,
+    title: "Standard Edition",
+  },
+  {
+    price: 31.99,
+    title: "Deluxe Edition",
+  },
 ];
 
 function toggleMenu() {
@@ -116,11 +124,11 @@ function handleByButton({ currentTarget: target }) {
   modal.classList.add(classes.opened);
   overlay.classList.add(classes.opened);
   document.body.style.overflow = "hidden";
-  window.addEventListener("keydown", closeModal);
+  // window.addEventListener("keydown", closeModal);
 }
 
 function closeModal(element) {
-  element.code === "Escape";
+  // element.code === "Escape";
   modal.classList.remove(classes.opened);
   overlay.classList.remove(classes.opened);
   document.body.style.overflow = "";
