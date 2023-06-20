@@ -103,4 +103,31 @@
         color: $grey;
         text-align: center;
     }
+
+    @media (max-width: 850px) {
+        &-top {
+            flex-wrap: wrap;
+        }
+
+        &-menu {
+            margin: 0 10px 10px 0;
+        }
+    }
+
+    @media (max-width: 700px) {
+        &-menu {
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: 560px) {
+        &-menu {
+            flex-wrap: wrap;
+            column-gap: 10px
+        }
+
+        &-info {
+            margin: 30px auto 25px auto;
+        }
+    }
 }

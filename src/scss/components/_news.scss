@@ -122,11 +122,12 @@
                 }
 
                 &-prev {
-                    left: 10%;
+                    opacity: 0.8;
                 }
 
                 &-next {
-                    right: 10%;
+                    opacity: 0.8;
+
 
                     svg {
                         transform: scale(-1, 1);
