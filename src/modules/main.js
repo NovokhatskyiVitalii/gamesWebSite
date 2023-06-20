@@ -7,7 +7,7 @@ const menuButton = document.querySelector(".header-menu__button"),
   faqItem = document.querySelectorAll(".faq-item"),
   buttonElementGoToTop = document.querySelector("#btn-top"),
   buyButton = document.querySelectorAll(".buy-button"),
-  modal = document.querySelector(".modal"),
+  modal = document.querySelector("#modal"),
   modalTitle = document.querySelector(".modal-subtitle"),
   modalPrice = document.querySelector(".modal-total__price"),
   modalClose = document.querySelector(".modal-close"),
@@ -121,18 +121,28 @@ function handleByButton({ currentTarget: target }) {
   const { price, title } = values[value];
   modalTitle.innerText = title;
   modalPrice.innerText = `${price}$`;
-  modal.classList.add(classes.opened);
-  overlay.classList.add(classes.opened);
+  modal.classList.add("opened");
+  overlay.classList.add("opened");
   document.body.style.overflow = "hidden";
-  // window.addEventListener("keydown", closeModal);
 }
 
-function closeModal(element) {
-  // element.code === "Escape";
-  modal.classList.remove(classes.opened);
-  overlay.classList.remove(classes.opened);
+function closeModal() {
+  modal.classList.remove("opened");
+  overlay.classList.remove("opened");
   document.body.style.overflow = "";
 }
+
+overlay.addEventListener("click", (event) => {
+  if (event.currentTarget == overlay) {
+    closeModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.code === "Escape") {
+    closeModal();
+  }
+});
 
 window.onscroll = scrollFunction;
 menuButton.addEventListener("click", toggleMenu);
