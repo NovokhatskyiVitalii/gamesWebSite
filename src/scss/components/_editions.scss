@@ -2,6 +2,7 @@
 
     .editions {
         padding: 0 15px;
+        position: relative;
 
         &-list {
             margin-top: 32px;
@@ -78,7 +79,7 @@
 
             &-button {
                 position: absolute;
-                top: 125%;
+                top: 60%;
                 transform: translateY(-50%);
                 width: 32px;
                 height: 32px;
